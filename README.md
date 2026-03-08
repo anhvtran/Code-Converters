@@ -183,29 +183,9 @@ matwrite("data.mat", Dict("a" => a))
 
 ---
 
-## Limitations
-
-The converters handle the majority of scientific/numerical Octave code but are not exhaustive parsers. Known limitations:
-
-- **Cell arrays** `{}` are not converted
-- **Structs** `s.field` — field access is preserved but struct creation is not converted
-- **Regular expressions** / string manipulation functions — minimal support
-- **OOP / classdef** — not supported
-- **Complex nested expressions** inside index brackets may need manual review
-- The converters work line-by-line; multi-line expressions split with `...` are not handled
-
-For best results, review the output and test on small examples first.
-
----
 
 ## License
 
 MIT
 
----
 
-## Related tools
-
-- [smop](https://github.com/victorlei/smop) — full MATLAB→Python parser (heavier, uses AST)
-- [MATLAB to Julia](https://lakras.github.io/matlab-to-julia/) — online converter
-- [oct2py](https://github.com/blink1073/oct2py) — run Octave code directly from Python
